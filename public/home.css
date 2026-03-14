@@ -23,22 +23,30 @@ a:hover {
 }
 
 .site-header {
-  padding: 18px 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f7f1e8;
+  padding: 28px 48px 18px 48px;
+  background-color: #ffffff;
   border-bottom: 1px solid #e1d8c8;
-  letter-spacing: 0.04em;
-  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.site-title {
+.wordmark {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 26px;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
   font-weight: 500;
 }
 
+/* Small navigation under the wordmark */
+
 .site-menu {
-  font-size: 14px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
 }
 
 /* Hero section */
@@ -117,7 +125,7 @@ a:hover {
   left: 0;
   right: 18%;
   bottom: 18%;
-  background-image: url("/images/Home_2");
+  background-image: url("/images/Home_2.png");
 }
 
 .hero-image-small {
@@ -126,7 +134,7 @@ a:hover {
   bottom: 0;
   width: 52%;
   height: 55%;
-  background-image: url("/images/Home_1");
+  background-image: url("/images/Home_1.png");
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
 }
 
