@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Upload your dream room</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Turn your inspiration photo into a plan</h1>
+
+      <form action="/inspirations" method="post" enctype="multipart/form-data">
+        <label for="photo_field">Upload your room photo</label>
+        <input
+          id="photo_field"
+          type="file"
+          name="photo"
+          accept="image/*"
+          required
+        >
+
+        <label for="notes_field">Notes (optional: budget, room type, etc.)</label>
+        <textarea id="notes_field" name="notes" rows="3"></textarea>
+
+        <button type="submit">Get design plan</button>
+      </form>
+    </main>
+  </body>
+</html>

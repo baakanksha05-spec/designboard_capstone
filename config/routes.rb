@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  # Homepage -> new moodboard form
-  get("/", { :controller => "moodboards", :action => "new" })
+  devise_for(:users)
 
-  # Form submit
-  post("/moodboards", { :controller => "moodboards", :action => "create" })
+  # Home: upload form (requires login)
+  get("/", { :controller => "inspirations", :action => "new" })
 
-  # Show a single moodboard
-  get("/moodboards/:id", { :controller => "moodboards", :action => "show" })
+  # Past searches for current user
+  get("/inspirations", { :controller => "inspirations", :action => "index" })
+
+  get("/inspirations/new", { :controller => "inspirations", :action => "new" })
+  post("/inspirations", { :controller => "inspirations", :action => "create" })
+  get("/inspirations/:id", { :controller => "inspirations", :action => "show" })
 end

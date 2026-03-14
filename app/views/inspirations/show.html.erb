@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Your design plan</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Your Dream Room Plan</h1>
+
+      <% require "json" %>
+      <% ai_hash = JSON.parse(@inspiration.ai_data_json) %>
+
+      <section>
+        <h2>Reference photo</h2>
+        <img
+          src="<%= @inspiration.image_path %>"
+          alt="Inspiration"
+          style="max-width: 480px; border-radius: 8px;"
+        >
+        <% if @inspiration.notes.present? %>
+          <p><strong>Your notes:</strong> <%= @inspiration.notes %></p>
+        <% end %>
+      </section>
+
+      <section>
+        <h2>Key items to focus on</h2>
+        <ul>
+          <% ai_hash.fetch("items", []).each do |item| %>
+            <li>
+              <strong><%= item.fetch("category") %>:</strong>
+              <%= item.fetch("description") %><br>
+              <em><%= item.fetch("why_it_works") %></em>
+            </li>
+          <% end %>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Style rules</h2>
+        <ol>
+          <% ai_hash.fetch("style_rules", []).each do |rule| %>
+            <li><%= rule %></li>
+          <% end %>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Shopping tips</h2>
+        <ul>
+          <% ai_hash.fetch("shopping_tips", []).each do |tip| %>
+            <li><%= tip %></li>
+          <% end %>
+        </ul>
+      </section>
+
+      <p>
+        <a href="/inspirations/new">Upload another inspiration</a>
+      </p>
+    </main>
+  </body>
+</html>
