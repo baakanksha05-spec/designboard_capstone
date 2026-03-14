@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  background-color: #f5efe6;
+  color: #3c3a35;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Top bar */
+
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  padding: 18px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f1e8;
+  border-bottom: 1px solid #e1d8c8;
+  letter-spacing: 0.04em;
+  font-size: 14px;
+}
+
+.site-title {
+  font-weight: 500;
+}
+
+.site-menu {
+  font-size: 14px;
+}
+
+/* Hero section */
+
+.hero {
+  flex: 1;
+  display: flex;
+  padding: 40px 48px 64px 48px;
+  gap: 32px;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1;
+  position: relative;
+}
+
+/* Text card */
+
+.hero-card {
+  background-color: #fdfbf7;
+  padding: 56px 56px 40px 56px;
+  max-width: 520px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 40px;
+  line-height: 1.1;
+  margin: 0 0 20px 0;
+}
+
+.hero-body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #6d685e;
+  margin-bottom: 28px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 10px 28px;
+  border: 1px solid #c5b69e;
+  border-radius: 2px;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  background-color: #e8ddcc;
+}
+
+/* Image collage */
+
+.hero-image-large,
+.hero-image-small {
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.hero-image-large {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 18%;
+  bottom: 18%;
+  background-image: url("/images/Home_2");
+}
+
+.hero-image-small {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 52%;
+  height: 55%;
+  background-image: url("/images/Home_1");
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Upload form strip */
+
+.hero-form {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e1d8c8;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.hero-form label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.hero-form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-form-row input[type="file"] {
+  background-color: transparent;
+}
+
+.hero-form-row textarea {
+  min-width: 260px;
+  max-width: 360px;
+  height: 68px;
+}
+
+.hero-form button {
+  margin-top: 8px;
+  padding: 10px 24px;
+  border-radius: 2px;
+  border: 1px solid #3c3a35;
+  background-color: #3c3a35;
+  color: #fdfbf7;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+}
+
+.hero-form button:hover {
+  background-color: #56524a;
+}
+
+/* Footer contact strip */
+
+.site-footer {
+  padding: 16px 48px 24px 48px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  color: #7b7468;
+  border-top: 1px solid #e1d8c8;
+}

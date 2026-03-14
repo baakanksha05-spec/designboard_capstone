@@ -2,48 +2,77 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Upload your dream room</title>
+    <title>The Home Atelier</title>
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+      href="/home.css"
     >
   </head>
 
   <body>
-    <main class="container">
-      <header style="display: flex; justify-content: space-between; align-items: center;">
-        <h1>Turn your inspiration photo into a plan</h1>
-        <nav>
-          <a href="/inspirations">My inspirations</a>
-          |
-          <a href="/users/edit">Account settings</a>
-          |
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-title">The Home Atelier</div>
+        <nav class="site-menu">
+          <a href="/inspirations">My Inspirations</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="/users/edit">Account</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
           <a href="/users/sign_out" data-method="delete">Log out</a>
         </nav>
       </header>
 
-      <form action="/inspirations" method="post" enctype="multipart/form-data">
-        <label for="photo_field">Upload your room photo</label>
-        <input
-          id="photo_field"
-          type="file"
-          name="photo"
-          accept="image/*"
-          required
-        >
+      <section class="hero">
+        <div class="hero-left">
+          <div class="hero-card">
+            <div class="hero-eyebrow">Interior design studio</div>
+            <h1 class="hero-title">
+              Crafting<br>
+              Memorable Spaces
+            </h1>
+            <p class="hero-body">
+              The Home Atelier turns your inspiration photos into a
+              step‑by‑step design plan – from key furniture pieces to
+              styling rules you can follow in your own home.
+            </p>
+            <a href="#upload" class="hero-button">Start your project</a>
 
-        <label for="notes_field">Notes (optional: budget, room type, etc.)</label>
-        <textarea id="notes_field" name="notes" rows="3"></textarea>
+            <div id="upload" class="hero-form">
+              <form action="/inspirations" method="post" enctype="multipart/form-data">
+                <label for="photo_field">Upload your room photo</label>
+                <div class="hero-form-row">
+                  <input
+                    id="photo_field"
+                    type="file"
+                    name="photo"
+                    accept="image/*"
+                    required
+                  >
 
-        <button type="submit">Get design plan</button>
-      </form>
+                  <div>
+                    <label for="notes_field">Notes (budget, room type, vibe)</label>
+                    <textarea id="notes_field" name="notes"></textarea>
+                  </div>
+                </div>
 
-      <footer style="margin-top: 2rem;">
-        <hr>
-        <p><strong>Need more personalised advice?</strong></p>
-        <p>Email: design.studio@example.com &nbsp;|&nbsp; Instagram: @dreamroomdesigns</p>
+                <button type="submit">Generate my design plan</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-image-large"></div>
+          <div class="hero-image-small"></div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <strong>Need more personalised advice?</strong>
+        &nbsp;Email: design.studio@example.com &nbsp;|&nbsp;
+        Instagram: @dreamroomdesigns
       </footer>
-    </main>
+    </div>
   </body>
 </html>
