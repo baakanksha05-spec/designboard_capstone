@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My inspirations</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
+  </head>
+
+  <body>
+    <main class="container">
+      <header style="display: flex; justify-content: space-between; align-items: center;">
+        <h1>My inspirations</h1>
+        <nav>
+          <a href="/inspirations/new">Upload new</a>
+          |
+          <a href="/users/edit">Account settings</a>
+          |
+          <a href="/users/sign_out" data-method="delete">Log out</a>
+        </nav>
+      </header>
+
+      <% if @inspirations.any? %>
+        <ul>
+          <% @inspirations.each do |insp| %>
+            <li style="margin-bottom: 1rem;">
+              <a href="/inspirations/<%= insp.id %>">
+                <img
+                  src="<%= insp.image_path %>"
+                  alt="Inspiration"
+                  style="max-width: 200px; border-radius: 6px; display: block;"
+                >
+                <small>Created at <%= insp.created_at.strftime("%Y-%m-%d %H:%M") %></small>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>You have no inspirations yet. <a href="/inspirations/new">Upload your first one</a>.</p>
+      <% end %>
+
+      <footer style="margin-top: 2rem;">
+        <hr>
+        <p><strong>Need more personalised advice?</strong></p>
+        <p>Email: design.studio@example.com &nbsp;|&nbsp; Instagram: @dreamroomdesigns</p>
+      </footer>
+    </main>
+  </body>
+</html>

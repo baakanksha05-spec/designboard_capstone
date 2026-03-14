@@ -12,7 +12,16 @@
 
   <body>
     <main class="container">
-      <h1>Turn your inspiration photo into a plan</h1>
+      <header style="display: flex; justify-content: space-between; align-items: center;">
+        <h1>Turn your inspiration photo into a plan</h1>
+        <nav>
+          <a href="/inspirations">My inspirations</a>
+          |
+          <a href="/users/edit">Account settings</a>
+          |
+          <a href="/users/sign_out" data-method="delete">Log out</a>
+        </nav>
+      </header>
 
       <form action="/inspirations" method="post" enctype="multipart/form-data">
         <label for="photo_field">Upload your room photo</label>
@@ -29,6 +38,12 @@
 
         <button type="submit">Get design plan</button>
       </form>
+
+      <footer style="margin-top: 2rem;">
+        <hr>
+        <p><strong>Need more personalised advice?</strong></p>
+        <p>Email: design.studio@example.com &nbsp;|&nbsp; Instagram: @dreamroomdesigns</p>
+      </footer>
     </main>
   </body>
 </html>

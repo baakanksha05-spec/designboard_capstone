@@ -12,7 +12,16 @@
 
   <body>
     <main class="container">
-      <h1>Your Dream Room Plan</h1>
+      <header style="display: flex; justify-content: space-between; align-items: center;">
+        <h1>Your Dream Room Plan</h1>
+        <nav>
+          <a href="/inspirations">My inspirations</a>
+          |
+          <a href="/users/edit">Account settings</a>
+          |
+          <a href="/users/sign_out" data-method="delete">Log out</a>
+        </nav>
+      </header>
 
       <% require "json" %>
       <% ai_hash = JSON.parse(@inspiration.ai_data_json) %>
@@ -60,9 +69,11 @@
         </ul>
       </section>
 
-      <p>
-        <a href="/inspirations/new">Upload another inspiration</a>
-      </p>
+      <footer style="margin-top: 2rem;">
+        <hr>
+        <p><strong>Need more personalised advice?</strong></p>
+        <p>Email: design.studio@example.com &nbsp;|&nbsp; Instagram: @dreamroomdesigns</p>
+      </footer>
     </main>
   </body>
 </html>
